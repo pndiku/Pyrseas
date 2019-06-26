@@ -24,7 +24,7 @@ class PyTest(TestCommand):
 
 setup(
     name='Pyrseas',
-    version='0.8.0',
+    version='0.9.0beta',
     packages=['pyrseas', 'pyrseas.dbobject', 'pyrseas.lib', 'pyrseas.augment',
              ],
     package_data={'pyrseas': ['config.yaml']},
