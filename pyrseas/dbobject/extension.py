@@ -83,7 +83,7 @@ class Extension(DbObject):
             opt_clauses.append("SCHEMA %s" % quote_id(self.schema))
         if self.version is not None:
             opt_clauses.append("VERSION '%s'" % self.version)
-        return ["CREATE EXTENSION %s%s" % (
+        return ["CREATE EXTENSION IF NOT EXISTS %s%s" % (
                 quote_id(self.name), ('\n    ' + '\n    '.join(opt_clauses))
                 if opt_clauses else '')]
 
